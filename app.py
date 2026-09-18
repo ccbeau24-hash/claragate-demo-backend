@@ -27,13 +27,7 @@ app = FastAPI(title="ClaraGate Demo API", version="0.1.0rc2")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://www.democlaragate.com",
-        "https://democlaragate.com",
-        "http://localhost:8080",
-        "http://localhost:3000",
-        "null",
-    ],
+    allow_origins=["*"],
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
